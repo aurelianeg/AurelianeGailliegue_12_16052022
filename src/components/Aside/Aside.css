@@ -1,0 +1,42 @@
+@import '../../utils/style/colors.css';
+
+.aside_container {
+   width: 120px;
+   height: calc(100vh - 90px - 100px);
+   padding-bottom: 100px;
+   background-color: var(--background-color);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.aside_button {
+   width: 64px;
+   height: 64px;
+   background-color: white;
+   border-radius: 6px;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.aside_text {
+   width: 150px;
+   color: white;
+   font-size: 12px;
+   transform: rotate(-90deg);
+   display: flex;
+   flex-wrap: nowrap;
+   position: absolute;
+   bottom: 100px;
+}
+
+@media screen and (max-height: 675px) {
+   .aside_text {
+      width: 100px;
+      flex-wrap: wrap;
+      bottom: 60px;
+   }
+}

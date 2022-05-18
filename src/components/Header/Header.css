@@ -1,0 +1,30 @@
+@import '../../utils/style/colors.css';
+
+.header_container {
+   height: 90px;
+   padding-left: 30px;
+   padding-right: 70px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--background-color);
+}
+
+@media screen and (max-width: 1439px) {
+   .header_container {
+      padding-right: 40px;
+   }
+}
+
+.nav_link {
+   text-decoration: none;
+   color: white;
+   font-size: 24px;
+}
+
+@media screen and (max-width: 1439px) {
+   .nav_link {
+      font-size: 18px;
+   }
+}

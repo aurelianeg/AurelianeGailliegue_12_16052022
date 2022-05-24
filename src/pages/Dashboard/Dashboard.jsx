@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import ChartBar from '../../components/ChartBar/ChartBar'
 import ChartLine from '../../components/ChartLine/ChartLine'
 import ChartRadar from '../../components/ChartRadar/ChartRadar'
-import ChartPie from '../../components/ChartPie/ChartPie'
+import ChartRadialBar from '../../components/ChartRadialBar/ChartRadialBar'
 import Energy from '../../components/Energy/Energy'
 import calories from '../../assets/icons/calories.svg'
 import proteins from '../../assets/icons/proteins.svg'
@@ -88,12 +88,17 @@ function Dashboard() {
                      </div>
 
                      <div className="chart chart_square chart--radar">
-                        <ChartRadar data={performanceData} />
+                        <ChartRadar
+                           data={performanceData.data}
+                           axisTitles={performanceData.kind}
+                        />
                      </div>
 
-                     <div className="chart chart_square chart--pie">
-                        <h3 className="chart_title chart_title--pie">Score</h3>
-                        <ChartPie data={userData.todayScore} />
+                     <div className="chart chart_square chart--radialbar">
+                        <h3 className="chart_title chart_title--radialbar">
+                           Score
+                        </h3>
+                        <ChartRadialBar data={userData} />
                      </div>
                   </div>
 

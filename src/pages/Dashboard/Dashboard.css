@@ -97,7 +97,7 @@
    height: 260px;
 }
 
-.chart--bar, .chart--pie {
+.chart--bar, .chart--radialbar {
    background-color: var(--light-grey-background-color);
 }
 

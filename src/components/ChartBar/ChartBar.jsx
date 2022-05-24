@@ -66,8 +66,11 @@ function ChartBar(props) {
                domain={['dataMin-50', 'dataMax+50']}
                hide={true}
             />
-            <Tooltip content={ChartBarTooltip} />
+            <Tooltip content={ChartBarTooltip} cursor={{ fill: '#DFDFDF' }} />
             <Legend
+               formatter={(value) => (
+                  <span className="chart_bar_legend_item">{value}</span>
+               )}
                wrapperStyle={{
                   top: -20,
                   left: 40,

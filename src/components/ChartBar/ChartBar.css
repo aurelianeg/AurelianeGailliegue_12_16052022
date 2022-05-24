@@ -12,3 +12,7 @@
    justify-content: space-between;
    align-items: center;
 }
+
+.chart_bar_legend_item {
+   color: var(--grey-text-color);
+}

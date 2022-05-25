@@ -12,7 +12,9 @@
 @media screen and (max-width: 1439px) {
    .energy {
       width: 23%;
+      min-width: 180px;
       height: 85px;
+      margin-bottom: 20px;
    }
 }
 

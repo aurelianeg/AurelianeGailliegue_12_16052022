@@ -84,7 +84,10 @@ function Dashboard() {
                         <h3 className="chart_title chart_title--line">
                            Durée moyenne des sessions
                         </h3>
-                        <ChartLine data={sessionsData.sessions} />
+                        <ChartLine
+                           data={sessionsData.sessions}
+                           dates={activityData.sessions}
+                        />
                      </div>
 
                      <div className="chart chart_square chart--radar">
@@ -98,6 +101,7 @@ function Dashboard() {
                         <h3 className="chart_title chart_title--radialbar">
                            Score
                         </h3>
+                        <div className="chart_radialbar_background_circle"></div>
                         <ChartRadialBar data={userData} />
                      </div>
                   </div>

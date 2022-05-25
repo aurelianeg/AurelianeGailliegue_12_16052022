@@ -22,11 +22,12 @@ const ChartLineTooltip = ({ active, payload }) => {
 }
 
 function ChartLine(props) {
-   const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+   const weekDays = ['D', 'L', 'M', 'M', 'J', 'V', 'S']
    const data = JSON.parse(JSON.stringify(props.data))
-   // Replace dates by days on X axis
+   const dates = JSON.parse(JSON.stringify(props.dates))
+   // Replace dates by day french names on X axis
    for (let i = 0; i < data.length; i++) {
-      data[i].day = weekDays[i]
+      data[i].day = weekDays[new Date(dates[i].day).getDay()]
    }
 
    return (

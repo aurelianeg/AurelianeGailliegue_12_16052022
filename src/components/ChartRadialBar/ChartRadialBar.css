@@ -1,0 +1,12 @@
+@import '../../utils/style/colors.css';
+
+.chart_radialbar_percent_text {
+   font-size: 26px;
+   font-weight: 700;
+   z-index: 1;
+}
+
+.chart_radialbar_goal_text {
+   font-size: 16px;
+   font-weight: 500;
+}

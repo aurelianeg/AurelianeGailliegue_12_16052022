@@ -12,9 +12,9 @@ function ChartRadialBar(props) {
    // Get percentage from score value in data
    let scoreValue = 0
    if (data.todayScore) {
-      scoreValue = data.todayScore * 100
+      scoreValue = Math.ceil(data.todayScore * 100)
    } else {
-      scoreValue = data.score * 100
+      scoreValue = Math.ceil(data.score * 100)
    }
    // Create a new array with score data (avoid problems with data name 'todayScore' or 'score')
    let chartData = [

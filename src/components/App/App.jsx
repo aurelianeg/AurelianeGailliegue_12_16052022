@@ -7,7 +7,7 @@ import Dashboard from '../../pages/Dashboard/Dashboard'
 import Error from '../../pages/Error/Error'
 import './App.css'
 
-function App() {
+function App(props) {
    return (
       <div className="app_container">
          <Router>
@@ -16,8 +16,15 @@ function App() {
             <div className="main_container">
                <Aside />
                <Routes>
-                  <Route exact path="/" element={<Home />}></Route>
-                  <Route path="/:id" element={<Dashboard />}></Route>
+                  <Route
+                     exact
+                     path="/"
+                     element={<Home mock={props.mock} />}
+                  ></Route>
+                  <Route
+                     path="/:id"
+                     element={<Dashboard mock={props.mock} />}
+                  ></Route>
                   <Route path="*" element={<Error />}></Route>
                </Routes>
             </div>

@@ -1,5 +1,5 @@
-import { useFetch } from '../../utils/hooks/useFetch'
 import { useParams } from 'react-router-dom'
+import { useGetData } from '../../utils/hooks/useGetData'
 import ChartBar from '../../components/ChartBar/ChartBar'
 import ChartLine from '../../components/ChartLine/ChartLine'
 import ChartRadar from '../../components/ChartRadar/ChartRadar'
@@ -13,32 +13,23 @@ import Loader from '../../components/Loader/Loader'
 import Error from '../Error/Error'
 import './Dashboard.css'
 
-function Dashboard() {
+function Dashboard(props) {
    const { id } = useParams('/')
 
    const {
-      data: userData,
-      isDataLoading: isUserDataLoading,
-      error: userError,
-   } = useFetch('http://localhost:3001/user/' + id)
-
-   const {
-      data: activityData,
-      isDataLoading: isActivityDataLoading,
-      error: activityError,
-   } = useFetch('http://localhost:3001/user/' + id + '/activity')
-
-   const {
-      data: sessionsData,
-      isDataLoading: isSessionsDataLoading,
-      error: sessionsError,
-   } = useFetch('http://localhost:3001/user/' + id + '/average-sessions')
-
-   const {
-      data: performanceData,
-      isDataLoading: isPerformanceDataLoading,
-      error: performanceError,
-   } = useFetch('http://localhost:3001/user/' + id + '/performance')
+      userData,
+      isUserDataLoading,
+      userError,
+      activityData,
+      isActivityDataLoading,
+      activityError,
+      sessionsData,
+      isSessionsDataLoading,
+      sessionsError,
+      performanceData,
+      isPerformanceDataLoading,
+      performanceError,
+   } = useGetData(props.mock, id)
 
    if (userError || activityError || sessionsError || performanceError) {
       return <Error />

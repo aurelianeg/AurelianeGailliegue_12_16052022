@@ -1,0 +1,134 @@
+{
+   "25": {
+      "data": {
+         "id": 25,
+         "userInfos": {
+            "firstName": "Auréliane",
+            "lastName": "Gailliègue",
+            "age": 28
+         },
+         "todayScore": 0.29,
+         "keyData": {
+            "calorieCount": 1259,
+            "proteinCount": 101,
+            "carbohydrateCount": 259,
+            "lipidCount": 60
+         }
+      }
+   },
+   "25-activity": {
+      "data": {
+         "userId": 25,
+         "sessions": [
+            { "day": "2022-05-20", "kilogram": 78, "calories": 250 },
+            { "day": "2022-05-21", "kilogram": 79, "calories": 240 },
+            { "day": "2022-05-22", "kilogram": 78, "calories": 260 },
+            { "day": "2022-05-23", "kilogram": 77, "calories": 270 },
+            { "day": "2022-05-24", "kilogram": 77, "calories": 200 },
+            { "day": "2022-05-25", "kilogram": 76, "calories": 190 },
+            { "day": "2022-05-26", "kilogram": 76, "calories": 200 }
+         ]
+      }
+   },
+   "25-average-sessions": {
+      "data": {
+         "userId": 25,
+         "sessions": [
+            { "day": 1, "sessionLength": 20 },
+            { "day": 2, "sessionLength": 70 },
+            { "day": 3, "sessionLength": 82 },
+            { "day": 4, "sessionLength": 60 },
+            { "day": 5, "sessionLength": 0 },
+            { "day": 6, "sessionLength": 0 },
+            { "day": 7, "sessionLength": 0 }
+         ]
+      }
+   },
+   "25-performance": {
+      "data": {
+         "userId": 25,
+         "kind": {
+            "1": "cardio",
+            "2": "energy",
+            "3": "endurance",
+            "4": "strength",
+            "5": "speed",
+            "6": "intensity"
+         },
+         "data": [
+            { "value": 90, "kind": 1 },
+            { "value": 100, "kind": 2 },
+            { "value": 70, "kind": 3 },
+            { "value": 60, "kind": 4 },
+            { "value": 80, "kind": 5 },
+            { "value": 110, "kind": 6 }
+         ]
+      }
+   },
+   "10": {
+      "data": {
+         "id": 10,
+         "userInfos": {
+            "firstName": "Peter",
+            "lastName": "Parker",
+            "age": 25
+         },
+         "score": 0.86,
+         "keyData": {
+            "calorieCount": 2950,
+            "proteinCount": 120,
+            "carbohydrateCount": 200,
+            "lipidCount": 150
+         }
+      }
+   },
+   "10-activity": {
+      "data": {
+         "userId": 10,
+         "sessions": [
+            { "day": "2022-05-20", "kilogram": 81, "calories": 400 },
+            { "day": "2022-05-21", "kilogram": 79, "calories": 380 },
+            { "day": "2022-05-22", "kilogram": 80, "calories": 350 },
+            { "day": "2022-05-23", "kilogram": 80, "calories": 490 },
+            { "day": "2022-05-24", "kilogram": 79, "calories": 410 },
+            { "day": "2022-05-25", "kilogram": 80, "calories": 450 },
+            { "day": "2022-05-26", "kilogram": 77, "calories": 410 }
+         ]
+      }
+   },
+   "10-average-sessions": {
+      "data": {
+         "userId": 10,
+         "sessions": [
+            { "day": 1, "sessionLength": 90 },
+            { "day": 2, "sessionLength": 60 },
+            { "day": 3, "sessionLength": 70 },
+            { "day": 4, "sessionLength": 70 },
+            { "day": 5, "sessionLength": 80 },
+            { "day": 6, "sessionLength": 60 },
+            { "day": 7, "sessionLength": 90 }
+         ]
+      }
+   },
+   "10-performance": {
+      "data": {
+         "userId": 10,
+         "kind": {
+            "1": "cardio",
+            "2": "energy",
+            "3": "endurance",
+            "4": "strength",
+            "5": "speed",
+            "6": "intensity"
+         },
+         "data": [
+            { "value": 250, "kind": 1 },
+            { "value": 290, "kind": 2 },
+            { "value": 220, "kind": 3 },
+            { "value": 300, "kind": 4 },
+            { "value": 260, "kind": 5 },
+            { "value": 200, "kind": 6 }
+         ]
+      }
+   }
+}

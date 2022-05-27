@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
    CartesianGrid,
@@ -21,6 +22,11 @@ const ChartLineTooltip = ({ active, payload }) => {
    }
 }
 
+/**
+ * React component to create a line chart with Recharts
+ * @param { Array, Array } props - data: session details, dates: session dates
+ * @returns { React.ReactElement } ChartLine component
+ */
 function ChartLine(props) {
    const weekDays = ['D', 'L', 'M', 'M', 'J', 'V', 'S']
    const data = JSON.parse(JSON.stringify(props.data))
@@ -87,6 +93,11 @@ function ChartLine(props) {
          </LineChart>
       </ResponsiveContainer>
    )
+}
+
+ChartLine.propTypes = {
+   data: propTypes.array.isRequired,
+   dates: propTypes.array.isRequired,
 }
 
 export default ChartLine

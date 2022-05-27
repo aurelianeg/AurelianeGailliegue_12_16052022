@@ -1,11 +1,17 @@
 import { useFetch } from './useFetch'
 
-const serverMock = "http://localhost:8000/"
-const server = "http://localhost:3001/user/"
-
+/**
+ * React hook to get data from mocked data or API (using useFetch)
+ * @param { Boolean } mock - Mocked data (true) or API data (false)
+ * @param { Number } id - User ID
+ * @returns { {Array, Boolean, Boolean, Array, Boolean, Boolean, Array, Boolean, Boolean, Array, Boolean, Boolean} }
+ */
 export function useGetData(mock, id) {
 
+   const serverMock = "http://localhost:8000/"
+   const server = "http://localhost:3001/user/"
    let url, urlSep, userUrl, activityUrl, averageSessionsUrl, performanceUrl
+
    if (!mock) {
       url = server + id
       urlSep = '/'

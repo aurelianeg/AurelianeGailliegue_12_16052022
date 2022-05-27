@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
    RadarChart,
@@ -7,6 +8,11 @@ import {
 } from 'recharts'
 import './ChartRadar.css'
 
+/**
+ * React component to create a radar chart with Recharts
+ * @param { Array, Array } props - data: performance, axisTitles: titles corresponding to data numbers
+ * @returns { React.ReactElement } ChartRadar component
+ */
 function ChartRadar(props) {
    const data = JSON.parse(JSON.stringify(props.data))
    // Rotate data to fit titles in container
@@ -41,6 +47,11 @@ function ChartRadar(props) {
          </RadarChart>
       </ResponsiveContainer>
    )
+}
+
+ChartRadar.propTypes = {
+   data: propTypes.array.isRequired,
+   axisTitles: propTypes.object.isRequired,
 }
 
 export default ChartRadar

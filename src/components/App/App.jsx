@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import GlobalStyle from '../../utils/style/GlobalStyle'
 import Header from '../Header/Header'
@@ -7,6 +8,11 @@ import Dashboard from '../../pages/Dashboard/Dashboard'
 import Error from '../../pages/Error/Error'
 import './App.css'
 
+/**
+ * React component for App with React Router
+ * @param { Boolean } props - mock: Mocked data (true) or API data (false)
+ * @returns { React.ReactElement } App
+ */
 function App(props) {
    return (
       <div className="app_container">
@@ -31,6 +37,10 @@ function App(props) {
          </Router>
       </div>
    )
+}
+
+App.propTypes = {
+   mock: propTypes.bool.isRequired,
 }
 
 export default App

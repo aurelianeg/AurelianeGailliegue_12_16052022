@@ -1,6 +1,12 @@
+import propTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
+/**
+ * React component to create the home page with links to different users
+ * @param { Boolean } props - mock: Mocked data (true) or API data (false)
+ * @returns { React.ReactElement } Home page
+ */
 function Home(props) {
    if (!props.mock) {
       return (
@@ -25,6 +31,10 @@ function Home(props) {
          </div>
       )
    }
+}
+
+Home.propTypes = {
+   mock: propTypes.bool.isRequired,
 }
 
 export default Home

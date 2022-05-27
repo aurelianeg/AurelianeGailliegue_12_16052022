@@ -1,5 +1,11 @@
+import propTypes from 'prop-types'
 import './Energy.css'
 
+/**
+ * React component to create a energy element with icon, number and type of input
+ * @param { SVGElement, string, string, string } props - img: SVG element, name: French name, quantity: number and unit for element, type: English name
+ * @returns { React.ReactElement } Energy component
+ */
 function Energy(props) {
    return (
       <div className="energy">
@@ -14,6 +20,13 @@ function Energy(props) {
          </div>
       </div>
    )
+}
+
+Energy.propTypes = {
+   img: propTypes.node.isRequired,
+   name: propTypes.string.isRequired,
+   quantity: propTypes.string.isRequired,
+   type: propTypes.string.isRequired,
 }
 
 export default Energy

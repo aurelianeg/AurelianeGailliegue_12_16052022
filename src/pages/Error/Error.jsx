@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import './Error.css'
 
+/**
+ * React component to create the error page when URL is incorrect
+ * @returns { React.ReactElement } Error page
+ */
 function Error() {
    return (
       <div className="error_container">

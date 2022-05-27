@@ -2,6 +2,10 @@ import logo from '../../assets/logo.svg'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
 
+/**
+ * React component to create the App header with logo and navigation
+ * @returns { React.ReactElement } Header component
+ */
 function Header() {
    return (
       <div className="header_container">

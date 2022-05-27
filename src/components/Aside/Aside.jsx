@@ -4,6 +4,10 @@ import bicycle from '../../assets/icons/bicycle.svg'
 import dumbbell from '../../assets/icons/dumbbell.svg'
 import './Aside.css'
 
+/**
+ * React component for Aside navigation
+ * @returns {React.ReactElement} Aside component
+ */
 function Aside() {
    return (
       <div className="aside_container">

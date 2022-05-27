@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
 
+/**
+ * React hook to fetch data on an given URL
+ * @param { String } url - URL containing data to fetch
+ * @returns { {Array, Boolean, Boolean} } - data: array containing fetched data, isDataLoading: boolean to know if the data is loaded or not, error: boolean to know if an error occurred or not 
+ */
 export function useFetch(url) {
    const [data, setData] = useState([])
    const [isDataLoading, setDataLoading] = useState(true)

@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
    RadialBarChart,
@@ -6,6 +7,11 @@ import {
 } from 'recharts'
 import './ChartRadialBar.css'
 
+/**
+ * React component to create a radial bar chart with Recharts
+ * @param { Array } props - data: array containing score for the day
+ * @returns { React.ReactElement } ChartRadialBar component
+ */
 function ChartRadialBar(props) {
    const data = JSON.parse(JSON.stringify(props.data))
 
@@ -70,6 +76,10 @@ function ChartRadialBar(props) {
          </RadialBarChart>
       </ResponsiveContainer>
    )
+}
+
+ChartRadialBar.propTypes = {
+   data: propTypes.object.isRequired,
 }
 
 export default ChartRadialBar

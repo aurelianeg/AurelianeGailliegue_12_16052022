@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
    BarChart,
@@ -23,6 +24,11 @@ const ChartBarTooltip = ({ active, payload }) => {
    }
 }
 
+/**
+ * React component to create a bar chart with Recharts
+ * @param { Array } props - data: sessions
+ * @returns { React.ReactElement } ChartBar component
+ */
 function ChartBar(props) {
    const data = JSON.parse(JSON.stringify(props.data))
    // Replace dates by numbers on X axis
@@ -100,6 +106,10 @@ function ChartBar(props) {
          </BarChart>
       </ResponsiveContainer>
    )
+}
+
+ChartBar.propTypes = {
+   data: propTypes.array.isRequired,
 }
 
 export default ChartBar

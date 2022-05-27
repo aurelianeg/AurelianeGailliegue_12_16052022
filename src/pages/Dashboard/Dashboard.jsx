@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 import { useGetData } from '../../utils/hooks/useGetData'
 import ChartBar from '../../components/ChartBar/ChartBar'
@@ -13,6 +14,11 @@ import Loader from '../../components/Loader/Loader'
 import Error from '../Error/Error'
 import './Dashboard.css'
 
+/**
+ * React component to create the dashboard page with user data
+ * @param { Boolean } props - mock: Mocked data (true) or API data (false)
+ * @returns { React.ReactElement } Dashboard page
+ */
 function Dashboard(props) {
    const { id } = useParams('/')
 
@@ -131,6 +137,10 @@ function Dashboard(props) {
          )
       }
    }
+}
+
+Dashboard.propTypes = {
+   mock: propTypes.bool.isRequired,
 }
 
 export default Dashboard

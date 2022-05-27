@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
    body {
       margin: 0;
       width: 100%;
-      max-width: 1440px;
    }
 
    div {

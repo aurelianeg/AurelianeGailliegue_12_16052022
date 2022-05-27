@@ -1,95 +1,88 @@
 # SportSee
 
-SportSee, une startup dédiée au coaching sportif, lance une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
+SportSee, a start-up dedicated to sport coaching, is launching a new version of its application.
 
-- Les maquettes à intégrer se trouvent au lien suivant : https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1
-- Le kanban avec les user stories à intégrer se trouve ici : https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e
-Pour ce sprint, seulement les user stories de la partie TO-DO doivent être intégrées.
+## Prerequisites
 
-### Objectifs techniques
+-  [NodeJS](https://nodejs.org/en/)
+-  [npm](https://www.npmjs.com/)
+-  [Yarn](https://yarnpkg.com/)
+-  [React](https://fr.reactjs.org/) v17.0.2
+-  [React Router](https://reactrouter.com/) v6.3.0
+-  [Recharts](https://recharts.org/en-US/) v2.1.9 - _React 17 has been installed to avoid ResponsiveContainer CSS problems._
+-  [PropTypes](https://www.npmjs.com/package/prop-types) v15.8.1
+-  [StyledComponents](https://www.npmjs.com/package/styled-components) v5.3.5
 
-L’objectif est de refaire la page profil avec React.
+## Installation
 
-- Le projet intègre des graphiques sur l’activité sportive de l’utilisateur : D3 ou Recharts peuvent être utilisés, au choix.
-- Concernant l’intégration CSS du projet, pas besoin de travailler sur la version mobile et tablette du projet, seule la partie desktop est demandée (au minimum 1024 x 720 px).
-- Concernant les données, un backend utilisant NodeJS a été créé, et est disponible ici : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard. Il va permettre de réaliser des calls HTTP et de récupérer des données d’exemple. Tout y est décrit : les étapes d’installation ainsi que les calls HTTP mis en place.
-- Pour la gestion des calls en eux-mêmes, Fetch ou Axios peuvent être utilisés. Par contre, il est important que les calls soient réalisés en dehors des composants React: un service à part qui se chargera de faire les calls doit être créé.
+### Front-end
 
-### Documentation
+1. Clone the repository
 
-- L’ensemble de la documentation doit être réalisée en anglais.
-- Le fichier README ne doit comporter que les étapes d’installation ainsi que les prérequis du projet. Dans ce fichier, tu devras dire comment installer et lancer le projet.
-- Le projet va utiliser React : des Proptypes doivent être intégrés pour chacun des components. 
-- En dehors des méthodes de cycle de vie (componentDidMount par exemple), le projet doit avoir des fonctions et méthodes documentées (JsDoc).
+```sh
+git clone https://github.com/aurelianeg/AurelianeGailliegue_12_16052022.git
+```
 
+2. Install the dependencies
 
-# Getting Started with Create React App
+```sh
+npm install
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+3. Launch the project
 
-## Available Scripts
+```sh
+npm start
+```
 
-In the project directory, you can run:
+It runs the app in the development mode, and opens [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The page will reload when you make changes. You may also see any lint errors in the console.
 
-### `npm start`
+### Back-end
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Back-end repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The back-end repository using NodeJS is available on [this link](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard). It allows to make HTTP calls and to retrieve example data.
 
-### `npm test`
+1. Clone the repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git
+```
 
-### `npm run build`
+2. Install the dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+yarn
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Run the micro API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In _app/index.js_, change port variable to **3001** to launch the back-end on a different port than the front-end.
+Then:
 
-### `npm run eject`
+```sh
+yarn dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Data are now accessible at http://localhost:3001/user/${userId}/ in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Mocked data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Install json-server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+npm install -g json-server
+```
 
-## Learn More
+2. Launch json-server in front-end folder
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+json-server --watch ./src/utils/mock/serverMock.json --port 8000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Mocked data are now accessible at http://localhost:8000/ in your browser.
 
-### Code Splitting
+3. Change mock variable to true
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In _src/index.jsx_, change mock variable to **true** to visualize mocked data in the launched application.

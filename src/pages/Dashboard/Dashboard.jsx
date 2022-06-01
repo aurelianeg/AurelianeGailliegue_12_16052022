@@ -1,3 +1,4 @@
+import React from 'react'
 import propTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 import { useGetData } from '../../utils/hooks/useGetData'
@@ -16,7 +17,7 @@ import './Dashboard.css'
 
 /**
  * React component to create the dashboard page with user data
- * @param { Boolean } props - mock: Mocked data (true) or API data (false)
+ * @param { {mock: Boolean} } props - mock: Mocked data (true) or API data (false)
  * @returns { React.ReactElement } Dashboard page
  */
 function Dashboard(props) {

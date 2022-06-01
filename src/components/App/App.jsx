@@ -1,3 +1,4 @@
+import React from 'react'
 import propTypes from 'prop-types'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import GlobalStyle from '../../utils/style/GlobalStyle'
@@ -10,7 +11,7 @@ import './App.css'
 
 /**
  * React component for App with React Router
- * @param { Boolean } props - mock: Mocked data (true) or API data (false)
+ * @param { {mock: Boolean} } props - mock: Mocked data (true) or API data (false)
  * @returns { React.ReactElement } App
  */
 function App(props) {

@@ -1,3 +1,4 @@
+import React from 'react'
 import yoga from '../../assets/icons/yoga.svg'
 import swimming from '../../assets/icons/swimming.svg'
 import bicycle from '../../assets/icons/bicycle.svg'

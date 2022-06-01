@@ -1,3 +1,4 @@
+import React from 'react'
 import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
@@ -24,7 +25,7 @@ const ChartLineTooltip = ({ active, payload }) => {
 
 /**
  * React component to create a line chart with Recharts
- * @param { Array, Array } props - data: session details, dates: session dates
+ * @param { {data: Array, dates: Array} } props - data: session details, dates: session dates
  * @returns { React.ReactElement } ChartLine component
  */
 function ChartLine(props) {

@@ -1,3 +1,4 @@
+import React from 'react'
 import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
@@ -10,7 +11,7 @@ import './ChartRadar.css'
 
 /**
  * React component to create a radar chart with Recharts
- * @param { Array, Array } props - data: performance, axisTitles: titles corresponding to data numbers
+ * @param { {data: Array, axisTitles: Array} } props - data: performance, axisTitles: titles corresponding to data numbers
  * @returns { React.ReactElement } ChartRadar component
  */
 function ChartRadar(props) {

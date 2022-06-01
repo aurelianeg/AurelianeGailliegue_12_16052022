@@ -1,3 +1,4 @@
+import React from 'react'
 import propTypes from 'prop-types'
 import {
    ResponsiveContainer,
@@ -26,7 +27,7 @@ const ChartBarTooltip = ({ active, payload }) => {
 
 /**
  * React component to create a bar chart with Recharts
- * @param { Array } props - data: sessions
+ * @param { {data: Array} } props - data: sessions
  * @returns { React.ReactElement } ChartBar component
  */
 function ChartBar(props) {

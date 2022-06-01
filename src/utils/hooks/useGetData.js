@@ -4,7 +4,7 @@ import { useFetch } from './useFetch'
  * React hook to get data from mocked data or API (using useFetch)
  * @param { Boolean } mock - Mocked data (true) or API data (false)
  * @param { Number } id - User ID
- * @returns { {Array, Boolean, Boolean, Array, Boolean, Boolean, Array, Boolean, Boolean, Array, Boolean, Boolean} }
+ * @returns { {userData: Array, isUserDataLoading: Boolean, userError: Boolean, activityData: Array, isActivityDataLoading: Boolean, activityError: Boolean, sessionsData: Array, isSessionsDataLoading: Boolean, sessionsError: Boolean, performanceData: Array, isPerformanceDataLoading: Boolean, performanceError: Boolean} }
  */
 export function useGetData(mock, id) {
 

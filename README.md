@@ -2,7 +2,7 @@
 
 SportSee[^1] is a start-up dedicated to sports coaching. Users can follow on their page the number of sessions they carried out as well as the number of calories burned.
 
-**Goal of this project**: API integration in a React app, and use of JSDoc and PropTypes.
+**Goal of this project**: API integration in a React app, use of JSDoc and PropTypes, and use of a graphic library.
 
 ## Load specifications
 

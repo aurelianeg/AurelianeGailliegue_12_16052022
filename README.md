@@ -1,6 +1,24 @@
 # SportSee
 
-SportSee, a start-up dedicated to sport coaching, is launching a new version of its application.
+SportSee[^1] is a start-up dedicated to sports coaching. Users can follow on their page the number of sessions they carried out as well as the number of calories burned.
+
+**Goal of this project**: API integration in a React app, and use of JSDoc and PropTypes.
+
+## Load specifications
+
+### Website designs
+
+The desktop design is available on [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR).
+
+![Design for the home page](./src/assets/design/homepage.png 'Design for the home page')
+
+### Technical constraints
+
+-  Application development with React.
+-  Use of a graphic library: Recharts.
+-  HTTP calls (with Fetch) outside of React components.
+-  Use of mocked data before API integration.
+-  Documentation with JSDoc and PropTypes.
 
 ## Prerequisites
 
@@ -14,29 +32,6 @@ SportSee, a start-up dedicated to sport coaching, is launching a new version of 
 -  [StyledComponents](https://www.npmjs.com/package/styled-components) v5.3.5
 
 ## Installation
-
-### Front-end
-
-1. Clone the repository
-
-```sh
-git clone https://github.com/aurelianeg/AurelianeGailliegue_12_16052022.git
-```
-
-2. Install the dependencies
-
-```sh
-npm install
-```
-
-3. Launch the project
-
-```sh
-npm start
-```
-
-It runs the app in the development mode, and opens [http://localhost:3000](http://localhost:3000) to view it in your browser.
-The page will reload when you make changes. You may also see any lint errors in the console.
 
 ### Back-end
 
@@ -58,14 +53,14 @@ yarn
 
 3. Run the micro API
 
-In _app/index.js_, change port variable to **3001** to launch the back-end on a different port than the front-end.
+In `app/index.js`, change port variable to `3001` to launch the back-end on a different port than the front-end.
 Then:
 
 ```sh
 yarn dev
 ```
 
-Data are now accessible at http://localhost:3001/user/${userId}/ in your browser.
+API data are now accessible at <http://localhost:3001/user/${userId}/> in your browser.
 
 #### Mocked data
 
@@ -81,8 +76,32 @@ npm install -g json-server
 json-server --watch ./src/utils/mock/serverMock.json --port 8000
 ```
 
-Mocked data are now accessible at http://localhost:8000/ in your browser.
+Mocked data are now accessible at <http://localhost:8000/> in your browser.
 
 3. Change mock variable to true
 
-In _src/index.jsx_, change mock variable to **true** to visualize mocked data in the launched application.
+In `src/index.jsx`, change mock variable to `true` to visualize mocked data (insted of API data) in the launched application.
+
+### Front-end
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/aurelianeg/sportsee.git
+```
+
+2. Install the dependencies
+
+```sh
+npm install
+```
+
+3. Launch the project
+
+```sh
+npm start
+```
+
+It runs the app in the development mode, and the website is opened on [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload when changes are made in the code, and any lint errors can be seen in the console.
+
+[^1]: This is the 9th project of the "Front-end developer (JS - React)" training by OpenClassrooms.
